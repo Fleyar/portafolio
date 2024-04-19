@@ -15,9 +15,9 @@ body{
 }
 
 h1{ font-size: 3.5em;}
-h2{ font-size: 2.7em;}
+h2{ font-size: 2.7em;color: white;}
 h3{ font-size: 2em;}
-p{ font-size: 1.25em;}
+p{ font-size: 1.25em; color: white;}
 ul{ list-style: none;}
 li{ font-size: 1.25em;}
 
@@ -129,6 +129,27 @@ header a:hover{
     background-size: cover;
     background-position: center center;
 }
+.hero__illustrations {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.hero__content, .hero__illustrations {
+    flex: 1 1 0;
+}
+.hero__logo {
+    position: absolute;
+    width: 30vmin;
+    top: 10%;
+    z-index: 1;
+    aspect-ratio: 1;
+}
+.hero__image {
+    position: relative;
+    z-index: 2;
+    border-bottom: 1px solid var(--primary);
+}
+
 
 #fleyarin .container{
     /* text-align: center; */
