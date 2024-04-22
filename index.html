@@ -42,23 +42,9 @@
             </div>
         </div>
     </header>
-    <!-- <div id="headerContainer"></div> -->
-
-    <!-- <header class="header">
-        <div class="container">
-            <p class="logo">Fleyar</p>
-            <nav>
-                <a href="#quienSoy"><span class="peso">$ </span>Inicio</a>
-                <a href="#proyectos"><span class="peso">$ </span>Proyectos</a>
-                <a href="#caracteristicas"><span class="peso">$ </span>Sobre mí</a>
-                <a href="#contacto"><span class="peso">$ </span>Contacto</a>
-            </nav>
-        </div>
-    </header> -->
 
     <div class="container content">
     <section class="hero">
-       <!--  <div class="redes"><a href="discord"></a></div> -->
         <div class="hero__content">
             <h1 class="hero__title">Fleyar es un <span>desarrollador web  </span>durante el día<br> <span style="color: white;">&</span> <span>mona china</span> en las noches</h1>
             <div class="hero__description">Aguanten las monas chinas</div>
@@ -78,7 +64,7 @@
 
     <section class="projects">
         <div class="projects__header">
-            <h2 class="h2"> projects</h2>
+            <h2 class="h2"> Sroyectos</h2>
             <a class="projects__link" href="/projects">Ver más ~~></a>
         </div>
         <div class="project-list">
@@ -90,7 +76,7 @@
                     <li class="project__tech">JS</li>
                 </ul>
                 <div class="project__content">
-                    <div class="project__name">Mona</div>
+                    <div class="project__name">Una</div>
                     <div class="project__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                         Tempore eaque, perspiciatis reiciendis veniam ullam sint ipsa doloremque.
                     </div>
@@ -125,7 +111,7 @@
                     <li class="project__tech">JS</li>
                 </ul>
                 <div class="project__content">
-                    <div class="project__name">Mona</div>
+                    <div class="project__name">China</div>
                     <div class="project__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                         Tempore eaque, perspiciatis reiciendis veniam ullam sint ipsa doloremque.
                     </div>
@@ -138,18 +124,40 @@
         </div>
 
     </section>
+
+    <section class="skills">
+        <div class="skills__header">
+            <h2 class="h2"> Skills</h2>
+            <a class="skills__link" href="/skills">Ver más ~~></a>
+        </div>
+        <div class="skills-list">
+            <div class="project">
+                <img src="" alt="" class="project__image">
+                <ul class="project__techs">
+                    <li class="project__tech">HLTM</li>
+                    <li class="project__tech">CSS</li>
+                    <li class="project__tech">JS</li>
+                </ul>
+                <div class="project__content">
+                    <div class="project__name">Aguante Talleres</div>
+                    <div class="project__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Tempore eaque, perspiciatis reiciendis veniam ullam sint ipsa doloremque.
+                    </div>
+                    <div class="project__links">
+                        <a href="" class="button">Live =></a>
+                    </div>
+                </div>
+            </div>
+    </section>
+
 </div>
 
-<script>
-    // Utilizamos fetch para cargar el contenido de header.html
-    fetch('C:\Users\alber\OneDrive\Documents\Fleyar\port\componentes')
-        .then(response => response.text())
-        .then(data => {
-            // Insertamos el contenido de header.html en el contenedor
-            document.getElementById('header-container').innerHTML = data;
-        })
-        .catch(error => console.error('Error al cargar el archivo header.html:', error));
 
+
+
+
+
+<script>
     function toggleDropdown() {
         var dropdownList = document.getElementById("dropdownList");
         if (dropdownList.style.display === "none") {
@@ -157,8 +165,7 @@
         } else {
             dropdownList.style.display = "none";
             }
-}
-
+    }
 </script>
 </body>
 </html>
