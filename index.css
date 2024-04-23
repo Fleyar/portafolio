@@ -567,3 +567,52 @@ li {
     max-width: 340px;
     border-bottom: 1px solid var(--primary);
 }
+
+
+
+/***** Footer *****/
+footer {
+    display: block;
+    unicode-bidi: isolate;
+}
+.footer {
+    max-width: inherit;
+    width: 100%;
+    border-top: 1px solid var(--gray);
+    padding-top: 32px;
+    margin-bottom: 16px;
+}
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-bottom: 48px;
+}
+.footer__header {
+    display: flex;
+    gap: 32px;
+}
+.footer__title {
+    font-weight: 500;
+    font-size: 24px;
+}
+.footer__list {
+    display: flex;
+    gap: 8px;
+}
+.logo {
+    display: flex;
+    gap: 8px;
+}
+
+.footer__email {
+    color: var(--gray);
+}
+.footer__description {
+    margin-top: 16px;
+}
+.footer__copyright {
+    color: var(--gray);
+    text-align: center;
+}
