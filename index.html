@@ -3,7 +3,6 @@
 <head>
     <title>Fleyar</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="header.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body id="root">
@@ -52,7 +51,7 @@
         </div>
         <div class ="hero__illustrations">
             <img src="media/logo-outline.svg" alt class="hero__logo">
-            <img src="media/image-hero.png" alt="PanaRabbit" class="hero__image">
+            <img src="media/image-hero4.png" alt="PanaRabbit" class="hero__image">
             <div class="hero__status">Todo final es un comienzo!</div>
         </div>
     </section>
@@ -64,7 +63,7 @@
 
     <section class="projects">
         <div class="projects__header">
-            <h2 class="h2"> Sroyectos</h2>
+            <h2 class="h2"> Proyectos</h2>
             <a class="projects__link" href="/projects">Ver más ~~></a>
         </div>
         <div class="project-list">
@@ -128,26 +127,60 @@
     <section class="skills">
         <div class="skills__header">
             <h2 class="h2"> Skills</h2>
-            <a class="skills__link" href="/skills">Ver más ~~></a>
-        </div>
-        <div class="skills-list">
-            <div class="project">
-                <img src="" alt="" class="project__image">
-                <ul class="project__techs">
-                    <li class="project__tech">HLTM</li>
-                    <li class="project__tech">CSS</li>
-                    <li class="project__tech">JS</li>
-                </ul>
-                <div class="project__content">
-                    <div class="project__name">Aguante Talleres</div>
-                    <div class="project__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Tempore eaque, perspiciatis reiciendis veniam ullam sint ipsa doloremque.
-                    </div>
-                    <div class="project__links">
-                        <a href="" class="button">Live =></a>
-                    </div>
+            <div class="skills__content">
+                <div class="skills__illustrations illustrations">
+                    <img src="/images/logo-outline.svg" alt="" class="illustrations__logo">
+                    <svg width="100%" class="dots" viewBox="0 0 80 80">
+                        <circle cx="4" cy="4" r="4"></circle><circle cx="4" cy="28" r="4"></circle><circle cx="4" cy="52" r="4"></circle><circle cx="4" cy="76" r="4"></circle><circle cx="28" cy="4" r="4"></circle><circle cx="28" cy="28" r="4"></circle><circle cx="28" cy="52" r="4"></circle><circle cx="28" cy="76" r="4"></circle><circle cx="52" cy="4" r="4"></circle><circle cx="52" cy="28" r="4"></circle><circle cx="52" cy="52" r="4"></circle><circle cx="52" cy="76" r="4"></circle><circle cx="76" cy="4" r="4"></circle><circle cx="76" cy="28" r="4"></circle><circle cx="76" cy="52" r="4"></circle><circle cx="76" cy="76" r="4"></circle>
+                    </svg>
+                    <svg width="100%" class="dots" viewBox="0 0 128 128">
+                        <circle cx="4" cy="4" r="4"></circle><circle cx="4" cy="28" r="4"></circle><circle cx="4" cy="52" r="4"></circle><circle cx="4" cy="76" r="4"></circle><circle cx="4" cy="100" r="4"></circle><circle cx="4" cy="124" r="4"></circle><circle cx="28" cy="4" r="4"></circle><circle cx="28" cy="28" r="4"></circle><circle cx="28" cy="52" r="4"></circle><circle cx="28" cy="76" r="4"></circle><circle cx="28" cy="100" r="4"></circle><circle cx="28" cy="124" r="4"></circle><circle cx="52" cy="4" r="4"></circle><circle cx="52" cy="28" r="4"></circle><circle cx="52" cy="52" r="4"></circle><circle cx="52" cy="76" r="4"></circle><circle cx="52" cy="100" r="4"></circle><circle cx="52" cy="124" r="4"></circle><circle cx="76" cy="4" r="4"></circle><circle cx="76" cy="28" r="4"></circle><circle cx="76" cy="52" r="4"></circle><circle cx="76" cy="76" r="4"></circle><circle cx="76" cy="100" r="4"></circle><circle cx="76" cy="124" r="4"></circle><circle cx="100" cy="4" r="4"></circle><circle cx="100" cy="28" r="4"></circle><circle cx="100" cy="52" r="4"></circle><circle cx="100" cy="76" r="4"></circle><circle cx="100" cy="100" r="4"></circle><circle cx="100" cy="124" r="4"></circle><circle cx="124" cy="4" r="4"></circle><circle cx="124" cy="28" r="4"></circle><circle cx="124" cy="52" r="4"></circle><circle cx="124" cy="76" r="4"></circle><circle cx="124" cy="100" r="4"></circle><circle cx="124" cy="124" r="4"></circle>
+                    </svg>
                 </div>
+                <div class="skills__list">
+                    
+                    <div class="skill-block">
+                        <div class="skill-block__name">Languages</div>
+                        <ul class="skill-block__list">
+                            <li class="skill-block__skill">JavaScript</li><li class="skill-block__skill">TypeScript</li><li class="skill-block__skill">Python</li>
+                        </ul>
+                    </div>
+                
+                    <div class="skill-block">
+                        <div class="skill-block__name">Databases</div>
+                        <ul class="skill-block__list">
+                            <li class="skill-block__skill">SQLite</li><li class="skill-block__skill">PostgreSQL</li>
+                        </ul>
+                    </div>
+                
+                    <div class="skill-block">
+                        <div class="skill-block__name">Other</div>
+                        <ul class="skill-block__list">
+                            <li class="skill-block__skill">HTML</li><li class="skill-block__skill">CSS</li><li class="skill-block__skill">SASS</li><li class="skill-block__skill">SCSS</li><li class="skill-block__skill">Less</li><li class="skill-block__skill">Stylus</li><li class="skill-block__skill">EJS</li><li class="skill-block__skill">Jinja2</li><li class="skill-block__skill">Pug</li>
+                        </ul>
+                    </div>
+                
+                    <div class="skill-block">
+                        <div class="skill-block__name">Frameworks</div>
+                        <ul class="skill-block__list">
+                            <li class="skill-block__skill">React</li><li class="skill-block__skill">Next</li><li class="skill-block__skill">Gulp</li><li class="skill-block__skill">Express</li><li class="skill-block__skill">Flask</li><li class="skill-block__skill">Quart</li>
+                        </ul>
+                    </div>
+                
+                            </div>
             </div>
+            </div>
+    </section>
+    <section class="about">
+        <div class="about__content">
+            <h2 class="h2">Sobre mí</h2>
+            <div class="about__text">
+                <p class="about__description">Developer en el día, mona china en las noches, el espiritu de una mona china se apodera de mí y dice que aleje las canecas</p>
+            </div>
+
+            <a href="/about-me" class="button">Más -&gt;</a>
+        </div>
+        <img src="media/image-hero3.png" alt="" class="about__image">
     </section>
 
 </div>

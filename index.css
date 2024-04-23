@@ -466,13 +466,104 @@ li {
 }
 
 /*********** Skills ***********/
-.skills__header {
+.skills {
+    width: 100%;
+}
+.skills__content {
     display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+.illustrations {
+    position: relative;
+    min-width: 300px;
+    min-height: 300px;
+}
+.skills__illustrations, .skills__list {
+    flex: 1 1 0;
+}
+.illustrations__logo {
+    width: 14vmin;
+    top: 30%;
+    position: absolute;
+    left: 70%;
+}
+.illustrations .dots:nth-of-type(1) {
+    width: 10vmin;
+    top: 20%;
+    left: 40%;
+    position: absolute;
+}
+.illustrations .dots:nth-of-type(2) {
+    width: 16vmin;
+    top: 70%;
+    left: 10%;
+    position: absolute;
+}
+.dots circle {
+    fill: var(--gray);
+}
+.dots circle {
+    fill: var(--gray);
+}
+.skills__illustrations, .skills__list {
+    flex: 1 1 0;
+}
+.skills__list {
+    column-gap: 16px;
+    columns: 3;
+}
+.skills .skill-block {
+    margin-bottom: 16px;
+}
+.skill-block__name {
+    font-weight: 600;
+    padding: 8px;
+    border-bottom: 1px solid var(--gray);
+}
+.skill-block__list {
+    padding: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: start;
+    align-items: start;
+    color: var(--gray);
+}
+.skill-block {
+    border: 1px solid var(--gray);
+    display: inline-block;
+    max-width: 300px;
+    min-width: 200px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+}
+/************* About **************/
+
+.about {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 48px;
 }
-.skills__link {
-    text-decoration: underline;
+.about__content {
+    flex: 1 1 0;
+    min-width: 300px;
+}
+.about__text {
+    margin-bottom: 32px;
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.about__description {
+    color: var(--gray);
+}
+.about__image {
+    flex: 1 1 0;
+    max-width: 340px;
+    border-bottom: 1px solid var(--primary);
 }
