@@ -6,8 +6,8 @@
         "contacts": "contacts"
     },
     "footer": {
-        "description": "Web designer and front-end developer based in Ukraine",
-        "copyright": "Copyright 2023. Made by Elias",
+        "description": "Web designer and front-end developer",
+        "copyright": "Copyright 2024. Made by Fleyar",
         "media": "Media"
     },
     "skills": {
@@ -18,63 +18,23 @@
         "framework": "Frameworks"
     },
     "projects": {
-        "chertnodes": {
-            "name": "ChertNodes",
-            "description": "Minecraft servers hosting"
+        "Una": {
+            "name": "Una",
+            "description": "This is a test"
         },
-        "protectx": {
-            "name": "ProtectX web",
-            "description": "Discord anti-crash bot"
+        "Mona": {
+            "name": "Mona",
+            "description": "This is a test"
         },
-        "khanswers": {
-            "name": "Kahoot Answers",
-            "description": "Get answers from kahoot quiz"
-        },
-        "kotikbot": {
-            "name": "KotikBot",
-            "description": "Landing for multi-functional cute discord bot"
-        },
-        "portfolio": {
-            "name": "This Portfolio",
-            "description": "My personal portfolio"
-        },
-        "blog": {
-            "name": "My blog",
-            "description": "Front-end of my future blog website"
-        },
-        "discordbot": {
-            "name": "Discord Bot Boilerplate",
-            "description": "Start creating scalable discord.js bot with typescript in seconds"
-        },
-        "chesspro": {
-            "name": "Chess PRO",
-            "description": "Landing page about service for viewing chess tournaments"
-        },
-        "ooku": {
-            "name": "Ooku",
-            "description": "Link shortener with discord auth"
-        },
-        "madhost": {
-            "name": "MadHost",
-            "description": "Minecraft and websites hosting with low prices"
-        },
-        "feedrum": {
-            "name": "Feedrum",
-            "description": "Ukrainian social network designed for programmers"
-        },
-        "deplos": {
-            "name": "Deplos",
-            "description": "Game servers hosting"
-        },
-        "pixel-battle": {
-            "name": "Pixel Battle",
-            "description": "Pixel art battle game"
+        "China": {
+            "name": "China",
+            "description": "This is a test"
         }
     },
     "pages": {
         "home": {
             "hero": {
-                "title": "Elias is a <span>web designer</span> and <span>front-end</span> developer",
+                "title": "Fleyar is a <span>web developer</span> with <span>front-end</span> developer",
                 "description": "He crafts responsive websites where technologies meet creativity",
                 "button": "Contact ME",
                 "status": "Open for new opportunities"
@@ -93,7 +53,7 @@
             "about": {
                 "title": "about",
                 "description": [
-                    "I’m a self-taught front-end developer based in Kyiv, Ukraine. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences. ",
+                    "I’m a self-taught front-end developer based in }. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences. ",
                     "Transforming my creativity and knowledge into a websites has been my passion for over a year. I have been helping various clients to establish their presence online. I always strive to learn about the newest technologies and frameworks."
                 ],
                 "button": "View all"

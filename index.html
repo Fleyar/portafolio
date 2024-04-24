@@ -2,12 +2,13 @@
 <html lang="es">
 <head>
     <title>Fleyar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <script src="index.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body id="root">
-    <header class="header">
+    <header class="header" data-translate="header">
         <input class="hamburger" type="checkbox" aria-label="Menu">
         <div class="media-header">
             <span class="media-header__line"></span>
@@ -35,15 +36,17 @@
                 <div class="dropdown" onclick="toggleDropdown()">
                     <span class="dropdown__label">ES</span>
                     <div class="dropdown__list" id="dropdownList" style="display: none;">
-                        <div class="dropdown__option" onclick="translate('en')">EN</div>
-                </div>              
+                        <div class="dropdown__option" id="enOption">EN</div>
+                    </div>
+                </div>
+                           
                 
             </div>
         </div>
     </header>
 
     <div class="container content">
-    <section class="hero">
+    <section class="hero" data-translate="hero">
         <div class="hero__content">
             <h1 class="hero__title">Fleyar es un <span>desarrollador web  </span>durante el día<br> <span style="color: white;">&</span> <span>mona china</span> en las noches</h1>
             <div class="hero__description">Aguanten las monas chinas</div>
@@ -56,12 +59,12 @@
         </div>
     </section>
 
-    <figure class="quote">
+    <figure class="quote" data-translate="quote">
         <blockquote class="quote__text">Todo final es un comienzo</blockquote>
         <figcaption class="quote__author">Yo merenguez</figcaption>
     </figure>
 
-    <section class="projects">
+    <section class="projects" data-translate="projects">
         <div class="projects__header">
             <h2 class="h2"> Proyectos</h2>
             <a class="projects__link" href="/projects">Ver más ~~></a>
@@ -124,7 +127,7 @@
 
     </section>
 
-    <section class="skills">
+    <section class="skills" data-translate="skills">
         <div class="skills__header">
             <h2 class="h2"> Skills</h2>
             <div class="skills__content">
@@ -184,7 +187,7 @@
             </div>
             </div>
     </section>
-    <section class="about">
+    <section class="about" data-translate="about">
         <div class="about__content">
             <h2 class="h2">Sobre mí</h2>
             <div class="about__text">
@@ -196,7 +199,7 @@
         <img src="media/image-hero3.png" alt="" class="about__image">
     </section>
 
-    <footer class="footer">
+    <footer class="footer" data-translate="footer">
         <div class="container">
             <div class="footer__inner">
                 <div class="footer__info">
@@ -241,3 +244,4 @@
     <script src="index.js"></script>
 </body>
 </html>
+
