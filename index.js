@@ -1,89 +1,51 @@
-/* function loadTexts(language, callback) {
-    var xhr = new XMLHttpRequest();
-    xhr.overrideMimeType("application/json");
-    xhr.open('GET', language + '.json', true);
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState == 4 && xhr.status == 200) { // Cambiado "200" a 200 (sin comillas)
-            texts = JSON.parse(xhr.responseText);
-            callback();
-        }
-    };
-    xhr.send(null);
-}
-
-function translate(language) {
-    loadTexts(language, function() {
-        Object.keys(texts).forEach(function(key) {
-            var element = document.getElementById(key);
-            if (element) {
-                element.innerText = texts[key];
-            }
-        });
-    });
-}
-
-// Cargar los textos al cargar la página
-window.onload = function () {
-    // Por defecto, mostrar textos en inglés
-    translate('texts');
-};
- */
-
-// Agrega un manejador de eventos al cargar el documento
-document.addEventListener('DOMContentLoaded', function() {
-    // Obtiene la opción de idioma
-    const enOption = document.getElementById('enOption');
-    
-    // Agrega un manejador de eventos al hacer clic en la opción de idioma
-    enOption.addEventListener('click', function() {
-        translate('en');
-    });
-});
-
-// Función para cambiar el idioma y actualizar el contenido de la página
-function translate(lang) {
-    idiomaActual = lang;
-    actualizarTraducciones();
-}
-
-// Función para mostrar/ocultar la lista de opciones de idioma
-function toggleDropdown() {
-    const dropdownList = document.getElementById('dropdownList');
-    dropdownList.style.display = dropdownList.style.display === 'none' ? 'block' : 'none';
-}
-
-
-
-// Función para actualizar el contenido de la página con las traducciones correspondientes
+let idiomaActual = 'es';
 function actualizarTraducciones() {
-    // Obtiene todos los elementos con la clase 'traducible'
-    const elementosTraducibles = document.querySelectorAll('.traducible');
+    fetch('texts.json')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data); // Verifica si los datos se imprimen correctamente
+            // Procesa y actualiza los elementos traducibles
+            actualizarElementosTraducibles(data, idiomaActual);
+        })
+        .catch(error => {
+            console.error('Error al cargar el archivo JSON:', error);
+        });
+}
+
+function actualizarElementosTraducibles(data, idiomaActual) {
+    // Selecciona todos los elementos con el atributo 'data-translate'
+    const elementosTraducibles = document.querySelectorAll('[data-translate]');
+    console.log(elementosTraducibles);
 
     // Itera sobre cada elemento traducible
     elementosTraducibles.forEach(elemento => {
         // Obtiene la clave de traducción del atributo 'data-translate' del elemento
         const clave = elemento.getAttribute('data-translate');
 
-        // Verifica si la clave de traducción existe en el objeto de traducciones
-        if (traducciones[clave]) {
-            // Itera sobre cada nodo de texto hijo del elemento
-            elemento.childNodes.forEach(nodo => {
-                // Verifica si el nodo es de tipo texto
-                if (nodo.nodeType === Node.TEXT_NODE) {
-                    // Obtiene el idioma correspondiente del objeto de traducciones
-                    const traduccion = traducciones[clave][idiomaActual];
-                    // Reemplaza el contenido del nodo de texto con la traducción
-                    nodo.textContent = traduccion ? traduccion : nodo.textContent;
-                }
-            });
+        // Verifica si la clave de traducción existe en los datos cargados del archivo JSON
+        if (data[clave]) {
+            // Obtiene la traducción correspondiente
+            const traduccion = data[clave][idiomaActual];
+
+            // Actualiza el contenido del elemento con la traducción si existe
+            if (traduccion) {
+                elemento.textContent = traduccion;
+            }
         }
     });
 
-    // Actualiza el texto del botón de idioma
-    document.getElementById('currentLanguage').textContent = idiomaActual.toUpperCase();
+    // Actualiza el texto del botón de idioma si existe
+    const currentLanguageElement = document.getElementById('currentLanguage');
+    if (currentLanguageElement) {
+        currentLanguageElement.textContent = idiomaActual.toUpperCase();
+    }
 }
 
-
+// Agrega un event listener para el clic en el elemento con id 'enOption'
+document.getElementById('enOption').addEventListener('click', function() {
+    // Llama a la función actualizarTraducciones() cuando se haga clic en el elemento
+    actualizarTraducciones();
+});
 
 
 function toggleDropdown() {

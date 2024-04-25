@@ -61,40 +61,8 @@
             "contacts": {
                 "title": "contacts",
                 "text": "I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me",
-                "media": "Message me here",
-                "donate": "Donate me here"
+                "media": "Message me here"
             }
-        },
-        "projects": {
-            "description": "All of my projects",
-            "decent": "decent",
-            "small": "small",
-            "inProgress": "unfinished"
-        },
-        "about": {
-            "description": "Who am i",
-            "about": {
-                "description": [
-                    "I’m a self-taught front-end developer based in Kyiv, Ukraine. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences. ",
-                    "Transforming my creativity and knowledge into a websites has been my passion for over a year. I have been helping various clients to establish their presence online. ",
-                    "I always strive to learn about the newest technologies and frameworks. "
-                ]
-            },
-            "skills": {
-                "title": "skills"
-            },
-            "facts": {
-                "title": "fun-facts",
-                "list": [
-                    "I like winter more than summer", 
-                    "I often bike with my friends",
-                    "I like pizza and pasta", 
-                    "My favorite movie is The Green Mile"
-                ]
-            }
-        },
-        "contacts": {
-            "description": "How to contact me"
         }
     }
 }
