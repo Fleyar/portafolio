@@ -31,35 +31,11 @@
     font-style: normal;
     src: url(../fonts/e3428b597c378e1fdcb0.woff) format("woff");
   }
-  html,
-  body,
-  div,
-  span,
-  object,
-  iframe,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  blockquote,
-  a,
-  img,
-  ol,
-  ul,
-  li,
-  fieldset,
-  form,
-  label,
-  article,
-  aside,
-  details,
-  header,
-  nav,
-  section,
-  summary {
+  html, body, div, span, object, iframe,
+  h1, h2, h3, h4, h5, h6,
+  p, blockquote, a, img, ol, ul, li, fieldset,
+  form, label, article, aside, details,header,
+  nav,section,summary {
     margin: 0;
     padding: 0;
     border: 0;
@@ -476,6 +452,7 @@
     --gray-op: hsl(219 14% 71%/0.1);
     --background: hsl(218 12% 18%);
     --white: hsl(0 0% 100%);
+    /*--gold: hsl(46, 50%, 42%);*/
   }
   
   /***Project***/
