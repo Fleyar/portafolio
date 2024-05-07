@@ -60,6 +60,7 @@
       "message-title": "Deja tu mensaje aquí"
     },
     "footer": {
+      "title":"Media",
       "email": "albeiroreyesflorez@gmail.com",
       "description": "Desarrollador web Colombiano",
       "media": ["linkedin", "github", "discord"],
