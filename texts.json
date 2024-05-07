@@ -8,7 +8,7 @@
       "contacts": "Contacto"
     },
     "hero": {
-      "title": "Fleyar,{desarrollador} fron-ent {and} back-end {ready} listo para dejar huella desde {Colombia}",
+      "title": "Fleyar,{desarrollador} fron-ent {and} back-end {ready} {listo para dejar huella desde} {Colombia}",
       "description": "Desarrollo web con pasión, desde Colombia para el mundo.",
       "button": "Contáctame =>",
       "status": "¡Todo final es un comienzo!"
@@ -40,9 +40,13 @@
     },
     "skills": {
       "header": "Habilidades",
+      "name":"Lenguajes",
       "languages": ["JavaScript", "TypeScript", "Python"],
+      "name2":"Bases de Datos",
       "databases": ["SQLite", "PostgreSQL"],
+      "name3":"Otros",
       "other": ["HTML", "CSS", "SASS", "SCSS", "Less", "Stylus", "EJS", "Jinja2", "Pug"],
+      "name4":"Frameworks",
       "frameworks": ["React", "Next", "Gulp", "Express", "Flask", "Quart"]
     },
     "about": {
@@ -51,7 +55,7 @@
       "button": "Más ->"
     },
     "contacts": {
-      "header": "contacto",
+      "header": "Contáctame",
       "description": "Estoy interesado en oportunidades de tipo freelance. Sin embargo, si tienes otra solicitud o pregunta, no dudes en ponerte en contacto conmigo.",
       "message-title": "Deja tu mensaje aquí"
     },

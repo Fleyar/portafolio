@@ -12,7 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         case 'and':
                             return '<span style="color: var(--primary);">&</span>';
                         case 'ready':
-                            return '<br>listo para dejar huella desde <span style="color: var(--white);">Colombia</span>';
+                            return '<br>';
+                        case 'listo para dejar huella desde' :
+                            return '<span style="color: var(--primary);">listo para dejar huella desde</span>'
                         case 'Colombia':
                             return '<span style="color: var(--white);">Colombia</span>';
                         default:
@@ -27,9 +29,10 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('about-me').innerText = data.header['about-me'];
             document.getElementById('contact').innerText = data.header.contacts;
 
-            document.getElementById('titulo-hero').innerText = data.hero.title;
+            document.getElementById('titulo-hero').innerHTML = replaceHTML(data.hero.title);
             document.getElementById('descripcion-hero').innerText = data.hero.description;
             document.getElementById('boton-hero').innerText = data.hero.button;
+            document.getElementById('estado-hero').innerText = data.hero.status;
 
             document.getElementById('descripcion-footer').innerText = data.footer.description;
 
@@ -59,17 +62,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
             document.getElementById('header-skills').innerText = data.skills.header;
 
-            document.getElementById('nombre-skill').innerText = data.skills.languages.name;
-            document.getElementById('lenguajes').innerText = data.skills.languages.list.join(', ');
+            document.getElementById('nombre-skill').innerText = data.skills.name;
+            document.getElementById('lenguajes').innerText = data.skills.languages.join(' ');
 
-            document.getElementById('base-datos').innerText = data.skills.databases.name;
-            document.getElementById('lenguajes').innerText = data.skills.databases.list.join(', ');
+            document.getElementById('db-nombre').innerText = data.skills.name2;
+            document.getElementById('db').innerText = data.skills.databases.join(' ');
 
-            document.getElementById('otros-nombre').innerText = data.skills.others.name;
-            document.getElementById('lenguajes').innerText = data.skills.others.list.join(', ');
+            document.getElementById('otros-nombre').innerText = data.skills.name3;
+            document.getElementById('otros').innerText = data.skills.other.join(' ');
 
-            document.getElementById('frameworks-nombre').innerText = data.skills.frameworks.name;
-            document.getElementById('lenguajes').innerText = data.skills.frameworks.list.join(', ');
+            document.getElementById('frameworks-nombre').innerText = data.skills.name4;
+            document.getElementById('fm').innerText = data.skills.frameworks.join(' ');
 
             document.getElementById('header-about').innerText = data.about.header;
             document.getElementById('descripcion-about').innerText = data.about.description;
@@ -77,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             document.getElementById('header-contacto').innerText = data.contacts.header;
             document.getElementById('descripcion-contacto').innerText = data.contacts.description;
-            document.getElementById('titulo-contacto').innerText = data.contacts.title;
+            document.getElementById('titulo-contacto').innerText = data.contacts.header;
 
             document.getElementById('titulo-footer').innerText = data.footer.title;
 
