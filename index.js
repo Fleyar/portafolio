@@ -1,50 +1,90 @@
-let idiomaActual = 'es';
-function actualizarTraducciones() {
+document.addEventListener('DOMContentLoaded', function() {
+    // Cargar el archivo JSON
     fetch('texts.json')
         .then(response => response.json())
         .then(data => {
-            console.log(data); // Verifica si los datos se imprimen correctamente
-            // Procesa y actualiza los elementos traducibles
-            actualizarElementosTraducibles(data, idiomaActual);
-        })
-        .catch(error => {
-            console.error('Error al cargar el archivo JSON:', error);
-        });
-}
-
-function actualizarElementosTraducibles(data, idiomaActual) {
-    // Selecciona todos los elementos con el atributo 'data-translate'
-    const elementosTraducibles = document.querySelectorAll('[data-translate]');
-    console.log(elementosTraducibles);
-
-    // Itera sobre cada elemento traducible
-    elementosTraducibles.forEach(elemento => {
-        // Obtiene la clave de traducción del atributo 'data-translate' del elemento
-        const clave = elemento.getAttribute('data-translate');
-
-        // Verifica si la clave de traducción existe en los datos cargados del archivo JSON
-        if (data[clave]) {
-            // Obtiene la traducción correspondiente
-            const traduccion = data[clave][idiomaActual];
-
-            // Actualiza el contenido del elemento con la traducción si existe
-            if (traduccion) {
-                elemento.textContent = traduccion;
+              // Función para reemplazar los marcadores de posición con HTML
+              function replaceHTML(text) {
+                return text.replace(/\{(.*?)\}/g, function(match, p1) {
+                    switch (p1) {
+                        case 'desarrollador':
+                            return '<span>desarrollador</span>';
+                        case 'and':
+                            return '<span style="color: var(--primary);">&</span>';
+                        case 'ready':
+                            return '<br>listo para dejar huella desde <span style="color: var(--white);">Colombia</span>';
+                        case 'Colombia':
+                            return '<span style="color: var(--white);">Colombia</span>';
+                        default:
+                            return match;
+                    }
+                });
             }
-        }
-    });
+            // Insertar los textos en el HTML
+            document.getElementById('titulo-header').innerText = data.header.title;
+            document.getElementById('home').innerText = data.header.home;
+            document.getElementById('projects').innerText = data.header.projects;
+            document.getElementById('about-me').innerText = data.header['about-me'];
+            document.getElementById('contact').innerText = data.header.contacts;
 
-    // Actualiza el texto del botón de idioma si existe
-    const currentLanguageElement = document.getElementById('currentLanguage');
-    if (currentLanguageElement) {
-        currentLanguageElement.textContent = idiomaActual.toUpperCase();
-    }
-}
+            document.getElementById('titulo-hero').innerText = data.hero.title;
+            document.getElementById('descripcion-hero').innerText = data.hero.description;
+            document.getElementById('boton-hero').innerText = data.hero.button;
 
-// Agrega un event listener para el clic en el elemento con id 'enOption'
-document.getElementById('enOption').addEventListener('click', function() {
-    // Llama a la función actualizarTraducciones() cuando se haga clic en el elemento
-    actualizarTraducciones();
+            document.getElementById('descripcion-footer').innerText = data.footer.description;
+
+            // Insertar los textos en el resto de los elementos HTML
+            // Añade aquí más líneas según sea necesario para los demás elementos
+            document.getElementById('header-proyectos').innerText = data.projects.header;
+            document.getElementById('link-proyectos').innerText = data.projects['view-more'];
+         
+
+            document.getElementById('nombre-proyecto').innerText = data.projects['project-1'].name;
+            document.getElementById('descripcion-proyecto').innerText = data.projects['project-1'].description;
+            document.getElementById('boton-live').innerText = data.projects['project-1']['live-button'];
+            
+            document.getElementById('nombre-proyecto-2').innerText = data.projects['project-2'].name;
+            document.getElementById('descripcion-proyecto-2').innerText = data.projects['project-2'].description;
+            document.getElementById('boton-live-2').innerText = data.projects['project-2']['live-button'];
+            document.getElementById('boton-figma-2').innerText = data.projects['project-2']['figma-button'];
+
+            document.getElementById('nombre-proyecto-3').innerText = data.projects['project-3'].name;
+            document.getElementById('descripcion-proyecto-3').innerText = data.projects['project-3'].description;
+            document.getElementById('boton-live-3').innerText = data.projects['project-3']['live-button'];
+            document.getElementById('boton-gitgub-3').innerText = data.projects['project-3']['github-button'];
+
+
+            document.getElementById('autor-cita').innerText = data.quote.author;
+            document.getElementById('texto-cita').innerText = data.quote.text;
+
+            document.getElementById('header-skills').innerText = data.skills.header;
+
+            document.getElementById('nombre-skill').innerText = data.skills.languages.name;
+            document.getElementById('lenguajes').innerText = data.skills.languages.list.join(', ');
+
+            document.getElementById('base-datos').innerText = data.skills.databases.name;
+            document.getElementById('lenguajes').innerText = data.skills.databases.list.join(', ');
+
+            document.getElementById('otros-nombre').innerText = data.skills.others.name;
+            document.getElementById('lenguajes').innerText = data.skills.others.list.join(', ');
+
+            document.getElementById('frameworks-nombre').innerText = data.skills.frameworks.name;
+            document.getElementById('lenguajes').innerText = data.skills.frameworks.list.join(', ');
+
+            document.getElementById('header-about').innerText = data.about.header;
+            document.getElementById('descripcion-about').innerText = data.about.description;
+            document.getElementById('boton-about').innerText = data.about.button;
+
+            document.getElementById('header-contacto').innerText = data.contacts.header;
+            document.getElementById('descripcion-contacto').innerText = data.contacts.description;
+            document.getElementById('titulo-contacto').innerText = data.contacts.title;
+
+            document.getElementById('titulo-footer').innerText = data.footer.title;
+
+            // Se ha cargado correctamente
+            console.log('JSON cargado exitosamente.');
+        })
+        .catch(error => console.error('Error al cargar el JSON:', error));
 });
 
 

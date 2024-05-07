@@ -1,68 +1,65 @@
 {
     "header": {
-        "home": "home",
-        "projects": "projects",
-        "about": "about-me",
-        "contacts": "contacts"
+      "title": "Fleyar",
+      "menu": "Menu",
+      "home": "Inicio",
+      "projects": "Proyectos",
+      "about-me": "Sobre mí",
+      "contacts": "Contacto"
     },
-    "footer": {
-        "description": "Web designer and front-end developer",
-        "copyright": "Copyright 2024. Made by Fleyar",
-        "media": "Media"
+    "hero": {
+      "title": "Fleyar,{desarrollador} fron-ent {and} back-end {ready} listo para dejar huella desde {Colombia}",
+      "description": "Desarrollo web con pasión, desde Colombia para el mundo.",
+      "button": "Contáctame =>",
+      "status": "¡Todo final es un comienzo!"
     },
-    "skills": {
-        "language": "Languages",
-        "database": "Databases",
-        "other": "Other",
-        "tool": "Tools",
-        "framework": "Frameworks"
+    "quote": {
+      "text": "¡El que se intimida está predestinado a enfrentar el desafío ardiente!",
+      "author": "Yo merenguez"
     },
     "projects": {
-        "Una": {
-            "name": "Una",
-            "description": "This is a test"
-        },
-        "Mona": {
-            "name": "Mona",
-            "description": "This is a test"
-        },
-        "China": {
-            "name": "China",
-            "description": "This is a test"
-        }
+      "header": "Proyectos",
+      "view-more": "Ver más ~~>",
+      "project-1": {
+        "name": "Una",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eaque, perspiciatis reiciendis veniam ullam sint ipsa doloremque.",
+        "live-button": "Live =>"
+      },
+      "project-2": {
+        "name": "Mona",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eaque, perspiciatis reiciendis veniam ullam sint ipsa doloremque.",
+        "live-button": "Live =>",
+        "figma-button": "Figma =>"
+      },
+      "project-3": {
+        "name": "China",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eaque, perspiciatis reiciendis veniam ullam sint ipsa doloremque.",
+        "live-button": "Live =>",
+        "github-button": "GitHub =>"
+      }
     },
-    "pages": {
-        "home": {
-            "hero": {
-                "title": "Fleyar is a <span>web developer</span> with <span>front-end</span> developer",
-                "description": "He crafts responsive websites where technologies meet creativity",
-                "button": "Contact ME",
-                "status": "Open for new opportunities"
-            },
-            "quote": {
-                "text": "With great power comes great electricity bill",
-                "author": "Dr. Who"
-            },
-            "projects": {
-                "title": "projects",
-                "button": "View all"
-            },
-            "skills": {
-                "title": "skills"
-            },
-            "about": {
-                "title": "about",
-                "description": [
-                    "I’m a self-taught front-end developer based in }. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences. ",
-                    "Transforming my creativity and knowledge into a websites has been my passion for over a year. I have been helping various clients to establish their presence online. I always strive to learn about the newest technologies and frameworks."
-                ],
-                "button": "View all"
-            },
-            "contacts": {
-                "title": "contacts",
-                "text": "I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me",
-                "media": "Message me here"
-            }
-        }
+    "skills": {
+      "header": "Habilidades",
+      "languages": ["JavaScript", "TypeScript", "Python"],
+      "databases": ["SQLite", "PostgreSQL"],
+      "other": ["HTML", "CSS", "SASS", "SCSS", "Less", "Stylus", "EJS", "Jinja2", "Pug"],
+      "frameworks": ["React", "Next", "Gulp", "Express", "Flask", "Quart"]
+    },
+    "about": {
+      "header": "Sobre mí",
+      "description": "Un entusiasta del diseño web, desarrollo front-end y back-end, con raíces en Colombia y una visión global hacia el futuro digital.",
+      "button": "Más ->"
+    },
+    "contacts": {
+      "header": "contacto",
+      "description": "Estoy interesado en oportunidades de tipo freelance. Sin embargo, si tienes otra solicitud o pregunta, no dudes en ponerte en contacto conmigo.",
+      "message-title": "Deja tu mensaje aquí"
+    },
+    "footer": {
+      "email": "albeiroreyesflorez@gmail.com",
+      "description": "Desarrollador web Colombiano",
+      "media": ["linkedin", "github", "discord"],
+      "copyright": "© Copyright 2024. Made by Fleyar"
     }
-}
+  }
+  
